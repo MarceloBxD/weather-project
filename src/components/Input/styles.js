@@ -10,4 +10,10 @@ export const Input = styled.input`
     padding: 8px;
     background-color: #001026;
     color: #fff;
+    margin-top: 15px;
+    margin-left: 5px;
+`
+
+export const InputArea = styled.div`
+    border-radius: 10px;
 `

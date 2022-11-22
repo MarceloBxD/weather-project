@@ -33,6 +33,22 @@ export const Img = styled.img`
     
 `
 
+export const TemperatureInMoment = styled.h1`
+    font-size: 20px;
+    color: #fff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+`
+
+export const WindSpeed = styled.div`
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    height: 40px;
+    color: #fff;
+    font-weight: 200;
+    font-size: 20px;
+`
+
 export const CitySearchContainer = styled.div`
     display: flex;
     flex-direction: column;
@@ -42,10 +58,17 @@ export const CitySearchContainer = styled.div`
 
 export const LocationData = styled.div`
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
     width: 300px;
     height: 200px;
     border-radius: 10px;
+    padding: 10px;
+    gap: 10px
+`
+
+export const DataCity = styled.div`
+    display: flex;
 `
 
 export const Typography = styled.p`
@@ -54,4 +77,15 @@ export const Typography = styled.p`
     font-family: 'Courier New', Courier, monospace;
     margin-left: 15px;
     color: #fff;
+`
+
+export const Temperature = styled.h1`
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: #FFF;
+    font-size: 16px;
+`
+
+export const MaxMin = styled.div`
+    display: flex;
+    gap: 20px;
 `

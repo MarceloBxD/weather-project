@@ -1,12 +1,15 @@
-import React from 'react'
-import * as C from './styles'
-import { useState } from 'react'
+import React from "react";
+import * as C from "./styles";
+import { useApp } from "../../contexts/context";
 
 export const Input = () => {
 
-  const [cityToSearch, setCityToSearch] = useState("")
+  const { setLatitude, setLongitude } = useApp()
 
   return (
-    <C.Input onChange={e => setCityToSearch(e.target.value)} placeholder='Cidade...' value={cityToSearch}/>
-  )
-}
+    <C.InputArea>
+      <C.Input onChange={e => setLatitude(e.target.value)} placeholder="Latitude" />
+      <C.Input onChange={e => setLongitude(e.target.value)} placeholder="longitude" />
+    </C.InputArea>
+  );
+};
