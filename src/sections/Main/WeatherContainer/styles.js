@@ -9,7 +9,7 @@ export const GeralContainer = styled.div`
 `
 
 export const CityName = styled.p`
-    font-size: 17px;
+    font-size: 19px;
     color: #FFF;
     margin: 15px 0px 0px 5px;
     font-weight: bold;
@@ -77,14 +77,14 @@ export const DataCity = styled.div`
 
 export const Typography = styled.p`
     font-size: 18px;
-    font-weight: 500;
+    font-weight: 700;
     color: #fff;
 `
 
 export const Temperature = styled.h1`
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     color: #FFF;
-    font-size: 16px;
+    font-size: 21px;
 `
 
 export const CloudImg = styled.img`
@@ -98,9 +98,9 @@ export const CloudImg = styled.img`
 export const MaxMin = styled.div`
     display: flex;
     padding: 10px;
-    width: 200px;
+    width: 250px;
     gap: 20px;
     border-radius: 10px;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
 `

@@ -29,13 +29,12 @@ export const WeatherContainer = () => {
       <C.Container>
         <C.LocationData>
           <C.DataCity>
-            {/* <C.Img src={locationIcon} /> */}
             <C.CloudImg src={kelvin_to_celsius(temperature) >= 20 ? shiningSunImg : trovaoImg}/>
             <C.CityName>Local: {name}</C.CityName>
             <C.TemperatureInMoment>
               {kelvin_to_celsius(temperature)}º
             </C.TemperatureInMoment>
-            <C.Temperature>{description}</C.Temperature>
+            <C.Typography>{description}</C.Typography>
             <C.MaxMin>
               <C.Temperature>Max: {kelvin_to_celsius(tempMax)}</C.Temperature>
               <C.Temperature>Min: {kelvin_to_celsius(tempMin)}</C.Temperature>

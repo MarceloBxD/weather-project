@@ -7,13 +7,14 @@ export const Input = styled.input`
     border-radius: 10px;
     border: none;
     border: 1px solid #FFF;
-    padding: 8px;
+    padding: 12px;
     background-color: transparent;
     color: #fff;
     margin-top: 15px;
     margin-left: 5px;
+    font-size: 16px;
     &::placeholder{
-        color: #000;
+        color: #CCC;
         font-size: 15px;
         font-weight: 400;
     }
