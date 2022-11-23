@@ -8,10 +8,15 @@ export const Input = styled.input`
     border: none;
     border: 1px solid #FFF;
     padding: 8px;
-    background-color: #001026;
+    background-color: transparent;
     color: #fff;
     margin-top: 15px;
     margin-left: 5px;
+    &::placeholder{
+        color: #000;
+        font-size: 15px;
+        font-weight: 400;
+    }
 `
 
 export const InputArea = styled.div`

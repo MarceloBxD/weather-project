@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const GeralContainer = styled.div`
     display: flex;
-    width: 450px;
+    width: 800px;
     margin: 0 auto;
     height: 400px;
     margin-top: 30px;
@@ -44,7 +44,9 @@ export const WindSpeed = styled.div`
     display: flex;
     margin-top: 10px;
     justify-content: center;
+    align-items: center;
     color: #fff;
+    gap: 10px;
     font-weight: 200;
     font-size: 20px;
 `
@@ -59,11 +61,10 @@ export const CitySearchContainer = styled.div`
 export const LocationData = styled.div`
     display: flex;
     flex-direction: column;
-    align-items: center;
-    width: 300px;
-    height: 200px;
+    width: 400px;
+    height: 300px;
     border-radius: 10px;
-    gap: 10px
+    gap: 10px;
 `
 
 export const DataCity = styled.div`
@@ -75,9 +76,8 @@ export const DataCity = styled.div`
 `
 
 export const Typography = styled.p`
-    font-size: 16px;
-    font-weight: 400;
-    font-family: 'Courier New', Courier, monospace;
+    font-size: 18px;
+    font-weight: 500;
     color: #fff;
 `
 
@@ -91,9 +91,16 @@ export const CloudImg = styled.img`
     width: 284px;
     height: 120px;
     background-color: transparent;
+    object-fit: contain;
+    background-position: center;
 `
 
 export const MaxMin = styled.div`
     display: flex;
+    padding: 10px;
+    width: 200px;
     gap: 20px;
+    border-radius: 10px;
+    justify-content: space-around;
+    align-items: center;
 `

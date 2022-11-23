@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const HeaderContainer = styled.div`
     display: flex;
-    padding: 10px;
+    padding: 15px;
     align-items: center;
     justify-content: space-between;
     width: 100vw;
@@ -19,7 +19,7 @@ export const Title = styled.p`
 
 export const Avatar = styled.img`
     object-fit: cover;
-    width: 45px;
-    height: 45px;
-    border-radius: 10px;
+    width: 50px;
+    height: 50px;
+    border-radius: 100px;
 `
