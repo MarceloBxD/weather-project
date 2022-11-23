@@ -6,7 +6,7 @@ import locationIcon from "../../../assets/images/location.svg";
 import { useApp } from "../../../contexts/context";
 
 export const WeatherContainer = () => {
-  const { name, tempMax, tempMin, windSpeed, temperature, description, transform_to_celsius } = useApp();
+  const { name, tempMax, tempMin, windSpeed, temperature, description, kelvin_to_celsius } = useApp();
 
   return (
     <C.GeralContainer>
@@ -18,11 +18,11 @@ export const WeatherContainer = () => {
             <C.CityName>
               Local: {name}
             </C.CityName>
-          <C.TemperatureInMoment>{temperature}º</C.TemperatureInMoment>
+          <C.TemperatureInMoment>{kelvin_to_celsius(temperature)}º</C.TemperatureInMoment>
           <C.Temperature>{description}</C.Temperature>
           <C.MaxMin>
-            <C.Temperature>Max: {transform_to_celsius(parseFloat(tempMax))}</C.Temperature>
-            <C.Temperature>Min: {transform_to_celsius(parseFloat(tempMin))}</C.Temperature>
+            <C.Temperature>Max: {kelvin_to_celsius(tempMax)}</C.Temperature>
+            <C.Temperature>Min: {kelvin_to_celsius(tempMin)}</C.Temperature>
           </C.MaxMin>
           </C.DataCity>
           <C.WindSpeed>WindSpeed: {windSpeed}</C.WindSpeed>

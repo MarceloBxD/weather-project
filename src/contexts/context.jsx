@@ -6,16 +6,16 @@ const AppContext = createContext();
 export function AppProvider({ children }) {
   const [name, setName] = useState("");
   const [description, setDescription] = useState("");
-  const [temperature, setTemperature] = useState(0);
-  const [tempMax, setTempMax] = useState(0);
-  const [tempMin, setTempMin] = useState(0);
+  const [temperature, setTemperature] = useState(undefined);
+  const [tempMax, setTempMax] = useState(undefined);
+  const [tempMin, setTempMin] = useState(undefined);
+  const [cityName, setCityName] = useState(undefined)
   const [latitude, setLatitude] = useState(undefined);
   const [longitude, setLongitude] = useState(undefined);
   const [windSpeed, setWindSpeed] = useState(undefined);
-  const [country, setCountry] = useState(undefined);
 
   const getWeatherData = async () => {
-    const apiWeatherURL = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${API_KEY}`;
+    const apiWeatherURL = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${API_KEY}`;
     const res = await fetch(apiWeatherURL);
     const data = await res.json();
     console.log(data);
@@ -24,14 +24,13 @@ export function AppProvider({ children }) {
     setTempMin(data.main.temp_min);
     setWindSpeed(data.wind.speed);
     setTemperature(data.main.temp);
-    setCountry(data.sys.country);
     setDescription(data.weather[0].description);
   };
 
-  const transform_to_celsius = (temp_far) => {
-    var temp_celsius = 5 *(temp_far - 32) / 9;
-    console.log(temp_celsius)
-    return temp_celsius
+  const kelvin_to_celsius = (temp_kelvin) => {
+    const temp_celsius = temp_kelvin - 273.15 
+    const temp = temp_celsius.toFixed(2)
+    return temp
   }
 
   const value = {
@@ -50,11 +49,11 @@ export function AppProvider({ children }) {
     setWindSpeed,
     temperature,
     setTemperature,
-    country,
-    setCountry,
     description,
     setDescription,
-    transform_to_celsius
+    cityName,
+    setCityName,
+    kelvin_to_celsius
   };
 
   return <AppContext.Provider value={value}>{children}</AppContext.Provider>;

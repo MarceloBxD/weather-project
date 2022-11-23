@@ -4,12 +4,11 @@ import { useApp } from "../../contexts/context";
 
 export const Input = () => {
 
-  const { setLatitude, setLongitude } = useApp()
+  const { setCityName } = useApp()
 
   return (
     <C.InputArea>
-      <C.Input onChange={e => setLatitude(e.target.value)} placeholder="Latitude" />
-      <C.Input onChange={e => setLongitude(e.target.value)} placeholder="longitude" />
+      <C.Input onChange={e => setCityName(e.target.value)} placeholder="Cidade" />
     </C.InputArea>
   );
 };
