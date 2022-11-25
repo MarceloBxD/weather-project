@@ -9,6 +9,8 @@ export const GeralContainer = styled.div`
 `
 
 export const CityName = styled.p`
+    display: flex;
+    justify-content: center;
     font-size: 19px;
     color: #FFF;
     margin: 15px 0px 0px 5px;
@@ -34,21 +36,35 @@ export const Img = styled.img`
 `
 
 export const TemperatureInMoment = styled.h1`
+display: flex;
+justify-content: center;
     font-size: 24px;
     color: #fff;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 `
 
-export const WindSpeed = styled.div`
-    width: 300px;
+export const addInfos = styled.div`
+    width: 280px;
+    padding: 10px;
     display: flex;
     margin-top: 10px;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     color: #fff;
     gap: 10px;
-    font-weight: 200;
+    font-weight: 300;
     font-size: 20px;
+`
+
+export const Flex = styled.div`
+    display: flex;
+    justify-content: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 17px;
+    font-weight: 700;
+    align-items: center;
+    margin-top: -10px;
+    gap: 7px;
 `
 
 export const CitySearchContainer = styled.div`
@@ -56,6 +72,19 @@ export const CitySearchContainer = styled.div`
     flex-direction: column;
     align-items: center;
     margin-top: 120px;
+`
+
+export const Data = styled.div`
+    gap: 15px;
+`
+
+export const ImportantData = styled.div`
+    width: 280px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;    
 `
 
 export const LocationData = styled.div`
@@ -71,14 +100,15 @@ export const DataCity = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 10px;
     justify-content: center;
-    gap: 8px;
 `
 
 export const Typography = styled.p`
+    text-align: center;
     font-size: 18px;
     font-weight: 700;
-    color: #fff;
+    color: #000;
 `
 
 export const Temperature = styled.h1`
@@ -97,10 +127,8 @@ export const CloudImg = styled.img`
 
 export const MaxMin = styled.div`
     display: flex;
-    padding: 10px;
     width: 250px;
-    gap: 20px;
-    border-radius: 10px;
     justify-content: center;
+    gap: 15px;
     align-items: center;
 `

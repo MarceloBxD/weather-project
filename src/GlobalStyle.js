@@ -8,6 +8,6 @@ export const GlobalStyle = createGlobalStyle`
         font-family: 'Inconsolata', monospace;
     }
     body{
-        background-image: linear-gradient(90deg, #08244F, #134CB5, #0B42AB);
+        background-image: linear-gradient(90deg, aliceblue, blue, white);
     }
     `

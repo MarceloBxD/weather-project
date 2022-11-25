@@ -6,10 +6,11 @@ const AppContext = createContext();
 export function AppProvider({ children }) {
   const [name, setName] = useState("");
   const [description, setDescription] = useState("");
+  const [country, setCountry] = useState("");
   const [temperature, setTemperature] = useState(undefined);
   const [tempMax, setTempMax] = useState(undefined);
   const [tempMin, setTempMin] = useState(undefined);
-  const [cityName, setCityName] = useState(undefined)
+  const [cityName, setCityName] = useState(undefined);
   const [latitude, setLatitude] = useState(undefined);
   const [longitude, setLongitude] = useState(undefined);
   const [windSpeed, setWindSpeed] = useState(undefined);
@@ -18,7 +19,7 @@ export function AppProvider({ children }) {
     const apiWeatherURL = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${API_KEY}`;
     const res = await fetch(apiWeatherURL);
     const data = await res.json();
-    console.log(data);
+    setCountry(data.sys.country);
     setName(data.name);
     setTempMax(data.main.temp_max);
     setTempMin(data.main.temp_min);
@@ -28,10 +29,10 @@ export function AppProvider({ children }) {
   };
 
   const kelvin_to_celsius = (temp_kelvin) => {
-    const temp_celsius = temp_kelvin - 273.15 
-    const temp = temp_celsius.toFixed(2)
-    return temp
-  }
+    const temp_celsius = temp_kelvin - 273.15;
+    const temp = temp_celsius.toFixed(2);
+    return temp;
+  };
 
   const value = {
     name,
@@ -53,7 +54,9 @@ export function AppProvider({ children }) {
     setDescription,
     cityName,
     setCityName,
-    kelvin_to_celsius
+    kelvin_to_celsius,
+    country,
+    setCountry,
   };
 
   return <AppContext.Provider value={value}>{children}</AppContext.Provider>;

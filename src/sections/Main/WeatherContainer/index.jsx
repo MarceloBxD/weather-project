@@ -5,8 +5,8 @@ import { Button } from "../../../components/Button";
 import locationIcon from "../../../assets/images/location.svg";
 import { useApp } from "../../../contexts/context";
 import windSpeedIcon from "../../../assets/images/wind.png";
-import shiningSunImg from '../../../assets/images/shiningSun.png'
-import trovaoImg from '../../../assets/images/trovao.png'
+import shiningSunImg from "../../../assets/images/shiningSun.png";
+import trovaoImg from "../../../assets/images/trovao.png";
 
 export const WeatherContainer = () => {
   const {
@@ -17,6 +17,7 @@ export const WeatherContainer = () => {
     temperature,
     description,
     kelvin_to_celsius,
+    country
   } = useApp();
 
   return (
@@ -29,20 +30,35 @@ export const WeatherContainer = () => {
       <C.Container>
         <C.LocationData>
           <C.DataCity>
-            <C.CloudImg src={kelvin_to_celsius(temperature) >= 20 ? shiningSunImg : trovaoImg}/>
-            <C.CityName>Local: {name}</C.CityName>
-            <C.TemperatureInMoment>
-              {kelvin_to_celsius(temperature)}º
-            </C.TemperatureInMoment>
-            <C.Typography>{description}</C.Typography>
-            <C.MaxMin>
-              <C.Temperature>Max: {kelvin_to_celsius(tempMax)}</C.Temperature>
-              <C.Temperature>Min: {kelvin_to_celsius(tempMin)}</C.Temperature>
-            </C.MaxMin>
-            <C.WindSpeed>
-                <C.Img src={windSpeedIcon} />
-                {windSpeed}
-              </C.WindSpeed>
+            {name && (
+              <C.Data>
+                <C.CloudImg
+                  src={temperature >= 20 ? shiningSunImg : trovaoImg}
+                />
+                <C.ImportantData>
+                  <C.CityName>Local: {name}</C.CityName>
+                  <C.TemperatureInMoment>
+                    {kelvin_to_celsius(temperature)}º
+                  </C.TemperatureInMoment>
+                  <C.Typography>{description}</C.Typography>
+                  <C.MaxMin>
+                    <C.Temperature>
+                      Min: {kelvin_to_celsius(tempMin)}
+                    </C.Temperature>
+                    <C.Temperature>
+                      Max: {kelvin_to_celsius(tempMax)}
+                    </C.Temperature>
+                  </C.MaxMin>
+                </C.ImportantData>
+                <C.addInfos>
+                  <C.Flex>
+                    <C.Img src={windSpeedIcon} />
+                    {windSpeed}
+                  </C.Flex>
+                  <C.Flex>Country: {country}</C.Flex>
+                </C.addInfos>
+              </C.Data>
+            )}
           </C.DataCity>
         </C.LocationData>
       </C.Container>
