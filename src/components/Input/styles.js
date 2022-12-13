@@ -1,24 +1,25 @@
 import styled from "styled-components";
 
 export const Input = styled.input`
-    width: 200px;
-    outline: none;
-    margin-top: 15px;
-    border: none;
-    border-bottom: 2px solid #000;
-    padding: 12px;
-    background-color: transparent;
-    color: #FFF;
-    margin-top: 15px;
-    margin-left: 5px;
+  width: 200px;
+  outline: none;
+  margin-top: 15px;
+  border: none;
+  border-bottom: 2px solid #fff;
+  background-color: transparent;
+  padding: 8px;
+  color: #fff;
+  margin-top: 15px;
+  margin-left: 5px;
+  font-size: 17px;
+  &::placeholder {
+    font-family: "Inconsolata", monospace;
+    color: #ccc;
     font-size: 17px;
-    &::placeholder{
-        color: #CCC;
-        font-size: 15px;
-        font-weight: 400;
-    }
-`
+    font-weight: bold;
+  }
+`;
 
 export const InputArea = styled.div`
-    border-radius: 10px;
-`
+  border-radius: 10px;
+`;

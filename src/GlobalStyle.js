@@ -1,4 +1,5 @@
-import { createGlobalStyle } from 'styled-components'
+import { createGlobalStyle } from "styled-components";
+import bgImg from "./assets/images/bgImg.jpg";
 
 export const GlobalStyle = createGlobalStyle`
     *{
@@ -8,6 +9,22 @@ export const GlobalStyle = createGlobalStyle`
         font-family: 'Inconsolata', monospace;
     }
     body{
-        background-image: linear-gradient(90deg, aliceblue, blue, white);
+        background-image: url(${bgImg});
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-color: #000;
+        color: #fff;
+        height: 100vh;
+        width: 100vw;
+
     }
-    `
+    h1{
+        font-family: 'Lobster', cursive;
+        letter-spacing: 3px;
+    }
+    p{
+        font-family: 'Inconsolata', monospace;
+    }
+    `;

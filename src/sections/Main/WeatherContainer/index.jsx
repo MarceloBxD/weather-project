@@ -17,7 +17,7 @@ export const WeatherContainer = () => {
     temperature,
     description,
     kelvin_to_celsius,
-    country
+    country,
   } = useApp();
 
   return (
@@ -43,10 +43,10 @@ export const WeatherContainer = () => {
                   <C.Typography>{description}</C.Typography>
                   <C.MaxMin>
                     <C.Temperature>
-                      Min: {kelvin_to_celsius(tempMin)}
+                      Min: {kelvin_to_celsius(tempMin)}º
                     </C.Temperature>
                     <C.Temperature>
-                      Max: {kelvin_to_celsius(tempMax)}
+                      Max: {kelvin_to_celsius(tempMax)}º
                     </C.Temperature>
                   </C.MaxMin>
                 </C.ImportantData>
