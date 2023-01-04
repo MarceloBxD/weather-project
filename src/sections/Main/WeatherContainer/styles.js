@@ -5,6 +5,14 @@ export const GeralContainer = styled.div`
   justify-content: space-around;
   height: 400px;
   margin-top: 30px;
+
+  @media (max-width: 768px) {
+    margin-top: 0;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+  }
 `;
 
 export const CityName = styled.p`
@@ -39,7 +47,6 @@ export const TemperatureInMoment = styled.h1`
 `;
 
 export const addInfos = styled.div`
-  width: 280px;
   padding: 10px;
   display: flex;
   margin-top: 10px;
@@ -75,7 +82,6 @@ export const Data = styled.div`
 `;
 
 export const ImportantData = styled.div`
-  width: 280px;
   display: flex;
   justify-content: center;
   flex-direction: column;

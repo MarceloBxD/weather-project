@@ -1,5 +1,6 @@
 import { createGlobalStyle } from "styled-components";
 import bgImg from "./assets/images/bgImg.jpg";
+import styled from "styled-components";
 
 export const GlobalStyle = createGlobalStyle`
     *{
@@ -18,6 +19,7 @@ export const GlobalStyle = createGlobalStyle`
         color: #fff;
         height: 100vh;
         width: 100vw;
+        overflow: hidden;
 
     }
     h1{
@@ -28,3 +30,14 @@ export const GlobalStyle = createGlobalStyle`
         font-family: 'Inconsolata', monospace;
     }
     `;
+
+export const Flex = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  @media (max-width: 768px) {
+    flex-direction: row;
+  }
+`;

@@ -9,6 +9,7 @@ export const Input = styled.input`
   background-color: transparent;
   padding: 8px;
   color: #fff;
+  font-weight: bold;
   margin-top: 15px;
   margin-left: 5px;
   font-size: 17px;

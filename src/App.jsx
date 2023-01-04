@@ -1,16 +1,18 @@
-import { GlobalStyle } from './GlobalStyle'
-import { Header } from './sections/Header'
-import { WeatherContainer } from './sections/Main/WeatherContainer/index'
+import { GlobalStyle } from "./GlobalStyle";
+import { Header } from "./sections/Header";
+import { WeatherContainer } from "./sections/Main/WeatherContainer/index";
+import * as C from "./GlobalStyle";
 
 function App() {
-
   return (
-    <div>
-      <GlobalStyle/>
-      <Header/>
-      <WeatherContainer/>
-    </div>
-  )
+    <>
+      <Header />
+      <C.Flex>
+        <WeatherContainer />
+        <GlobalStyle />
+      </C.Flex>
+    </>
+  );
 }
 
-export default App
+export default App;

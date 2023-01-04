@@ -17,9 +17,10 @@ export const CityName = styled.p`
 
 export const Container = styled.div`
   display: flex;
-  margin-top: 10px;
   flex-direction: column;
-  align-items: center;
+  margin-top: 10px;
+  margin-right: 180px;
+  width: 100%;
 `;
 
 export const Img = styled.img`
@@ -39,14 +40,12 @@ export const TemperatureInMoment = styled.h1`
 `;
 
 export const addInfos = styled.div`
-  width: 280px;
   padding: 10px;
   display: flex;
   margin-top: 10px;
   justify-content: space-between;
   align-items: center;
   color: #fff;
-  gap: 10px;
   font-weight: 300;
   font-size: 20px;
 `;
@@ -71,11 +70,12 @@ export const CitySearchContainer = styled.div`
 `;
 
 export const Data = styled.div`
+  display: flex;
+  flex-direction: column;
   gap: 15px;
 `;
 
 export const ImportantData = styled.div`
-  width: 280px;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -85,12 +85,8 @@ export const ImportantData = styled.div`
 
 export const LocationData = styled.div`
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 400px;
-  height: 300px;
-  border-radius: 10px;
+  width: 100%;
+  height: 100%;
 `;
 
 export const DataCity = styled.div`
@@ -114,7 +110,6 @@ export const Temperature = styled.h1`
 `;
 
 export const CloudImg = styled.img`
-  width: 284px;
   height: 120px;
   background-color: transparent;
   object-fit: contain;
