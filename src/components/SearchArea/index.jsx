@@ -6,9 +6,9 @@ import { Button } from "../Button";
 export const SearchArea = () => {
   return (
     <C.CitySearchContainer>
-      <C.Typography>Qual cidade você deseja buscar?</C.Typography>
+      <C.Typography>Search city</C.Typography>
       <Input />
-      <Button value="Buscar" />
+      <Button value="Search" />
     </C.CitySearchContainer>
   );
 };

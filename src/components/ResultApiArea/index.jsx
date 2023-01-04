@@ -4,6 +4,7 @@ import * as C from "./styles";
 import windIcon from "../../../src/assets/images/wind.png";
 import shiningImg from "../../../src/assets/images/shiningSun.png";
 import stormImg from "../../../src/assets/images/storm.png";
+import sunImg from "../../../src/assets/images/sun.png";
 
 export const ResultApiArea = () => {
   const {
@@ -23,9 +24,9 @@ export const ResultApiArea = () => {
         <C.DataCity>
           {name && (
             <C.Data>
-              <C.CloudImg src={temperature >= 20 ? shiningImg : stormImg} />
+              <C.CloudImg src={temperature >= 28 ? sunImg : shiningImg} />
               <C.ImportantData>
-                <C.CityName>Local: {name}</C.CityName>
+                <C.CityName>Locate: {name}</C.CityName>
                 <C.TemperatureInMoment>
                   {kelvin_to_celsius(temperature)}º
                 </C.TemperatureInMoment>
