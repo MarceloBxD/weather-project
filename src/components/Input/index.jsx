@@ -3,11 +3,15 @@ import * as C from "./styles";
 import { useApp } from "../../contexts/context";
 
 export const Input = () => {
-  const { setCityName, getWeatherData } = useApp();
+  const { cityName, setCityName, getWeatherData } = useApp();
 
   const handleEnter = (e) => {
     if (e.keyCode === 13) {
-      getWeatherData();
+      if (!cityName) {
+        alert("Digite uma cidade");
+      } else {
+        getWeatherData();
+      }
     }
   };
 

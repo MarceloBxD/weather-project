@@ -4,9 +4,9 @@ import App from "./App";
 import { AppProvider } from "./contexts/context";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-  <AppProvider>
-    <React.StrictMode>
+  <React.StrictMode>
+    <AppProvider>
       <App />
-    </React.StrictMode>
-  </AppProvider>
+    </AppProvider>
+  </React.StrictMode>
 );

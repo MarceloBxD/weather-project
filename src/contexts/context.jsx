@@ -19,6 +19,11 @@ export function AppProvider({ children }) {
     const apiWeatherURL = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${API_KEY}`;
     const res = await fetch(apiWeatherURL);
     const data = await res.json();
+
+    if (!cityName) {
+      alert("Nenhuma cidade inserida!");
+    }
+
     setCountry(data.sys.country);
     setName(data.name);
     setTempMax(data.main.temp_max);
